@@ -24,9 +24,8 @@ def clickedSubmit():
     lblN=Label(master=frame3,text=f'You created a {int(ent.get())} Queen Puzzle !')
     lblN.grid(row=1,column=0)
 
-btnN = Button(master=frame2,
-    text="Submit",
-    command=clickedSubmit
+
+btnN = Button(master=frame2,text="Submit",command=clickedSubmit
 )
 btnN.grid(row=2,column=0)
 frame2.pack( side=TOP, expand=False)
@@ -38,10 +37,10 @@ def clickedStart():
     # print(valueN.get())
     N = int(ent.get())
     rb=valueN.get()
-    frame1.destroy()
-    frame2.destroy()
-    frame3.destroy()
-    puzzle_window(root,N,rb)
+    # frame1.destroy()
+    # frame2.destroy()
+    # frame3.destroy()
+    puzzle_window(N,rb)
     
 Label(master=frame3, text="""Choose Method:""",justify = LEFT,padx = 20).grid(row=2,column=0)
 Radiobutton(master=frame3, text="Custom",padx = 20, variable=valueN, value=1).grid(row=3,column=0)

@@ -5,7 +5,11 @@ class board():
         self.numOfNodes = numOfNodes
         self.N = N
         self.tileSize = 0
-
+        self.goal = False
+        self.minF = 1
+        self.curLeastQueen = 0
+        self.flagChange = -1
+        self.listQueens = []
 
 class tile():
     def __init__(self, num, row, column, colour):
